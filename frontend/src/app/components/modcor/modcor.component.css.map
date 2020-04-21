@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,EAAE,EAAE,EAAE,CAAC;EACH,UAAU,EAAE,MAAM;CAAG",
+    "sources": [
+        "modcor.component.sass"
+    ],
+    "names": [],
+    "file": "modcor.component.css"
+}

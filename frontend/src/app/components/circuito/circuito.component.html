@@ -1,0 +1,65 @@
+<section class="row">
+    <section class="container">
+        <div class="col s12 m12 l12">
+            <h4>
+                Bienvenido a Teslapp
+            </h4>
+            <div class="card col s12 m12 l12 xl12">
+            <mat-tab-group>
+                <mat-tab label="Baterías">
+                    <div class="title-wrap">
+                        <label class="title-table">Datos baterías</label>
+                        <a routerLink='/admbat'>
+                            <mat-icon class="settings">
+                                settings
+                            </mat-icon>
+                        </a>
+                    </div>
+                  <table>
+                      <tr>
+                          <th hidden>ID</th>
+                          <th>NOMBRE</th>
+                          <th>VOLTAJE</th>
+                          <th>TEMPERATURA</th>
+                          <th>FECHA</th>
+                      </tr>
+                      <tr *ngFor="let battery of batteryService.batteries">
+                          <td hidden>{{battery._id}}</td>
+                          <td>{{battery.name}}</td>
+                          <td>{{battery.voltage}}V</td>
+                          <td>{{battery.temperature}}°</td>
+                          <td>{{battery.date | date: "dd-MM-yyyy"}}</td>
+                      </tr>
+                  </table>                
+                </mat-tab>
+                <mat-tab label="Corriente">
+                    <div class="title-wrap">
+                        <label class="title-table">Datos corriente</label>
+                        <a routerLink='/admcor'>
+                            <mat-icon class="settings">
+                                settings
+                            </mat-icon>
+                        </a>
+                    </div>
+                  <table>
+                      <tr>
+                          <th hidden>ID</th>
+                          <th>NOMBRE</th>
+                          <th>INTENSIDAD</th>
+                          <th>FECHA</th>
+                      </tr>
+                      <tr *ngFor="let corr of corrService.corrs">
+                          <td hidden>{{corr._id}}</td>
+                          <td>{{corr.name}}</td>
+                          <td>{{corr.intensity}}</td>
+                          <td>{{corr.date | date: "dd-MM-yyyy"}}</td>
+                      </tr>
+                  </table>  
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+        </div>
+    </section>
+</section>
+
+

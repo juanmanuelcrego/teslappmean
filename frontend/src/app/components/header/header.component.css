@@ -1,0 +1,36 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 10vh;
+  color: #fff;
+  background-color: #222;
+  -webkit-box-shadow: 0 0 0.5vw 0.1vw rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0.5vw 0.1vw rgba(0, 0, 0, 0.5);
+}
+
+.header a {
+  font-size: 01.5rem;
+  margin-left: 02vw;
+  color: #fff;
+  font-family: Quicksand;
+}
+
+.header .btn-toggle {
+  font-size: 01.5rem;
+  margin-right: 02vw;
+}
+/*# sourceMappingURL=header.component.css.map */

@@ -1,0 +1,64 @@
+<section class="row">
+    <section class="container">
+        <div class="card col s12 m12 l4 xl4">
+            <div class="card-header">
+                <label>
+                    Corriente - Adm
+                </label>
+            </div>
+            <div class="card-content">
+                <form #corrForm="ngForm" (ngSubmit)="addCorr(corrForm)">
+                    <input type="hidden" name="_id" #_id="ngModel"
+                     [(ngModel)]="corrService.selectedCorr._id">
+                    <div class="input-field col s12 m12 l12 xl12">
+                        <input type="text" name="name" #name="ngModel" 
+                        [(ngModel)]="corrService.selectedCorr.name"
+                         placeholder="Nombre de la línea" required>
+                    </div>
+                    <div class="input-field col s12 m12 l12 xl12">
+                        <input type="number" name="intensity" 
+                        #temperature="ngModel" [(ngModel)]="corrService.selectedCorr.intensity"
+                        placeholder="Intensidad" required>
+                    </div>        
+                    <div class="input-field col s12 m12 l12 xl12">
+                        <input type="date" name="date" 
+                        #date="ngModel" [(ngModel)]="corrService.selectedCorr.date" required>
+                    </div>        
+                <div class="btnform">
+                    <button class="card-button">
+                        Aplicar
+                    </button>
+                    <button hidden class="card-button" (click)="resetFormCorr(corrForm)">
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+            </div>
+        </div>
+        <div class="card col s12 m12 l7 xl7 offset-l1 offset-xl1">
+            <table>
+                <thead>
+                    <th>Nombre</th>
+                    <th>Intensidad</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let corr of corrService.corrs">
+                        <td>{{corr.name}}</td>
+                        <td>{{corr.intensity}}</td>
+                        <td>{{corr.date | date: "dd-MM-yyyy"}}</td>
+                        <td>
+                            <a (click)="editCorr(corr)">
+                                <i class="material-icons edit">edit</i>
+                            </a>
+                            <a (click)="deleteCorr(corr._id)">
+                                <i class="material-icons del">delete</i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>

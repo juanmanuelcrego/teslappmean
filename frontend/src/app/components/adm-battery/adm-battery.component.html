@@ -1,0 +1,71 @@
+<section class="row">
+    <section class="container">
+        <div class="card col s12 m12 l4 xl4">
+            <div class="card-header">
+                <label>
+                    Baterías - Adm
+                </label>
+            </div>
+            <div class="card-content">
+                <form #batteryForm="ngForm" (ngSubmit)="addBattery(batteryForm)">
+                    <input type="hidden" name="_id" #_id="ngModel"
+                     [(ngModel)]="batteryService.selectedBattery._id">
+                    <div class="input-field col s12 m12 l12 xl12">
+                        <input type="text" name="name" #name="ngModel" 
+                        [(ngModel)]="batteryService.selectedBattery.name"
+                         placeholder="Nombre de la batería" required>
+                    </div>
+                    <div class="input-field col s12 m12 l12 xl12">
+                        <input type="number" name="voltage" #voltage="ngModel" 
+                        [(ngModel)]="batteryService.selectedBattery.voltage" 
+                        placeholder="Voltaje" required>
+                    </div>
+                    <div class="input-field col s12 m12 l12 xl12">
+                        <input type="number" name="temperature" 
+                        #temperature="ngModel" [(ngModel)]="batteryService.selectedBattery.temperature"
+                        placeholder="Temperatura" required>
+                    </div>        
+                    <div class="input-field col s12 m12 l12 xl12">
+                        <input type="date" name="date" 
+                        #date="ngModel" [(ngModel)]="batteryService.selectedBattery.date" required>
+                    </div>        
+                <div class="btnform">
+                    <button class="card-button">
+                        Aplicar
+                    </button>
+                    <button hidden class="card-button" (click)="resetForm(batteryForm)">
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+            </div>
+        </div>
+        <div class="card col s12 m12 l7 xl7 offset-l1 offset-xl1">
+            <table>
+                <thead>
+                    <th>Nombre</th>
+                    <th>Voltaje</th>
+                    <th>Temperatura</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let battery of batteryService.batteries">
+                        <td>{{battery.name}}</td>
+                        <td>{{battery.voltage}}</td>
+                        <td>{{battery.temperature}}</td>
+                        <td>{{battery.date | date: "dd-MM-yyyy"}}</td>
+                        <td>
+                            <a (click)="editBattery(battery)">
+                                <i class="material-icons edit">edit</i>
+                            </a>
+                            <a (click)="deleteBattery(battery._id)">
+                                <i class="material-icons del">delete</i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "settings.component.sass"
+    ],
+    "names": [],
+    "file": "settings.component.css"
+}

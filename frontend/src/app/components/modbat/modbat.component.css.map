@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,UADM,CACN,EAAE,CAAC;EACC,UAAU,EAAE,MAAM;CAAG;;AAF7B,AAGI,UAHM,CAGN,EAAE,CAAC;EACC,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,IAAI;CAAG;;AALtB,AAMI,UANM,CAMN,KAAK,CAAC;EACF,KAAK,EAAE,IAAI;CAAG",
+    "sources": [
+        "modbat.component.sass"
+    ],
+    "names": [],
+    "file": "modbat.component.css"
+}

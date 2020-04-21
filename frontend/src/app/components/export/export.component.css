@@ -1,0 +1,12 @@
+button {
+  font-size: 01.3rem;
+  cursor: pointer;
+  background-color: #29b6f6;
+  border: 0;
+  color: white;
+  font-weight: 600;
+  font-family: Roboto;
+  padding: 01vw;
+  border-radius: 0.3vw;
+}
+/*# sourceMappingURL=export.component.css.map */

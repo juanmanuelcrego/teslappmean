@@ -1,0 +1,65 @@
+.card.col {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #fff;
+}
+
+.card-header {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  border-bottom: 0.1vh solid #eee;
+  padding: 01vw;
+}
+
+.card-header mat-icon {
+  color: #666;
+  padding: 0;
+  margin: 0;
+}
+
+.card-header label {
+  color: #333;
+}
+
+.card-content {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  align-items: center;
+}
+
+.card-content .card-button {
+  color: #fff;
+  background-color: #333;
+  padding: 01vw;
+  border-radius: 0.3vw;
+  font-family: Roboto;
+  font-weight: 500;
+  border: 0;
+  border-bottom: 0.3vh solid rgba(0,0,0, 0.5);
+  box-shadow: 0 0 0.2vw 0.1vw rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.card-content .material-icons {
+  font-size: 5em;
+  color: #039be5;
+  cursor: default;
+}
+
+@media screen and (min-width: 992px) {
+  .card.col {
+    margin-top: 50px;
+    height: 400px;
+    width: 600px;
+  }
+  .card-content {
+    height: 300px;
+    justify-content: space-around;
+  }
+
+}

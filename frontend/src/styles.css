@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+body a {
+  text-decoration: none;
+}
+
+body a::hover {
+  background-color: transparent;
+}
+
+body a:active {
+  background-color: transparent;
+}
+
+body a:visited {
+  background-color: transparent;
+}
+/*# sourceMappingURL=styles.css.map */

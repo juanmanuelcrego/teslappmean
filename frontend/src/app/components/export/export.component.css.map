@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAC;EACH,SAAS,EAAE,OAAO;EAClB,MAAM,EAAE,OAAO;EACf,gBAAgB,EAAE,OAAO;EACzB,MAAM,EAAE,CAAC;EACT,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,GAAG;EAChB,WAAW,EAAE,MAAM;EACnB,OAAO,EAAE,IAAI;EACb,aAAa,EAAE,KAAK;CAAG",
+    "sources": [
+        "export.component.sass"
+    ],
+    "names": [],
+    "file": "export.component.css"
+}

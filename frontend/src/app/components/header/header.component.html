@@ -1,0 +1,47 @@
+<!-- section que engloba a todo el header -->
+<section class="row">
+    <!-- section header grid responsive, ocupa 12 columnas en todos los dispositivos -->
+    <section class="header col s12 m12 l12">
+        <!-- titulo de la app con el link hacia el home -->
+        <a routerLink='/home'>
+            {{cabecera.title}}
+        </a>
+        <!-- boton de menú -->
+        <div class="btn-toggle">  
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                <!-- icono del boton -->
+                <mat-icon>
+                    menu
+                </mat-icon>
+            </button>
+            <!-- toggle menú del boton -->
+            <mat-menu #menu="matMenu" xPosition="before">
+                <a routerLink='/home'>
+                    <button mat-menu-item>        
+                        <mat-icon>
+                            home
+                        </mat-icon>
+                        Inicio
+                    </button>
+                </a>
+                <a routerLink='/export'>
+                    <button mat-menu-item>
+                        <mat-icon>
+                            get_app
+                        </mat-icon>
+                        Export
+                    </button>
+                </a>
+<!-- botón de settings está comentado porque se habilitará posteriormente -->
+            <!-- <a routerLink='/settings'>
+                <button mat-menu-item>
+                    <mat-icon>
+                        settings
+                    </mat-icon>
+                    Ajustes
+                </button>
+            </a> -->
+            </mat-menu>
+        </div>
+    </section>
+</section>

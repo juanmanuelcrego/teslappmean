@@ -1,0 +1,97 @@
+<section class="row">
+  <section class="container">
+    <!-- MODULO BATERIAS -->
+    <div class="card col s12 m12 l3 offset-l1">
+      <div class="card-header">
+        <label>
+          Módulo Baterías
+        </label>
+        <div>
+          <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+            <mat-icon>expand_more</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu" xPosition="before">
+            <a routerLink='/export'>
+              <button mat-menu-item>
+                <mat-icon>
+                  get_app
+                </mat-icon>
+                  Export
+              </button>
+            </a>
+          </mat-menu>
+        </div>
+      </div>
+      <div class="card-content">
+        <span class="material-icons">
+          battery_charging_full
+        </span>
+        <a class="card-button" routerLink = '/modbat'>
+          Ingresar
+        </a>
+      </div>
+    </div>
+    <!-- MODULO CORRIENTE -->
+    <div class="card col s12 m12 l3 offset-l1">
+      <div class="card-header">
+        <label>
+          Módulo Corriente
+        </label>
+        <div>
+          <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+            <mat-icon>expand_more</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu" xPosition="before">
+            <a routerLink='/export'>
+              <button mat-menu-item>
+                <mat-icon>
+                  get_app
+                </mat-icon>
+                  Export
+              </button>
+            </a>
+          </mat-menu>
+        </div>
+      </div>
+      <div class="card-content">
+        <span class="material-icons">
+          flash_on
+        </span>
+        <a class="card-button" routerLink = '/modcor'>
+          Ingresar
+        </a>
+      </div>
+    </div>
+    <!-- CIRCUITO COMPLETO -->
+    <div class="card col s12 m12 l3 offset-l1">
+      <div class="card-header">
+        <label>
+          Circuito completo
+        </label>
+        <div>
+          <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+            <mat-icon>expand_more</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu" xPosition="before">
+            <a routerLink='/export'>
+              <button mat-menu-item>
+                <mat-icon>
+                  get_app
+                </mat-icon>
+                  Export
+              </button>
+            </a>
+          </mat-menu>
+        </div>
+      </div>
+      <div class="card-content">
+        <span class="material-icons">
+          speed
+        </span>
+        <a class="card-button" routerLink = '/circuito'>
+          Ingresar
+        </a>
+      </div>
+    </div>
+  </section>
+</section>
